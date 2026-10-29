@@ -1,5 +1,19 @@
 # Q-Learning Gridworld
-One line: what the agent learns.
+```
+Best value per cell:
+     0    1     2     3
+0 -2.3 -0.3   1.9   4.3
+1 -0.3  1.9   4.3   7.0
+2  1.9  4.3   7.0  10.0
+3  4.3  7.0  10.0   0.0
+
+Best action per cell:
+       0      1      2     3
+0  right  right   down  down
+1   down  right  right  down
+2   down   down  right  down
+3  right  right  right  GOAL
+```
 
 ## Problem
 4x4 grid, start (0,0), goal (3,3) = +10, step cost -2,
