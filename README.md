@@ -1,4 +1,16 @@
 # Q-Learning Gridworld
+
+A tabular Q-learning agent that learns the shortest path through a 4x4 gridworld while avoiding costly hazard cells.
+
+## Problem
+4x4 grid, start (0,0), goal (3,3) = +10, step cost -2,
+hazards: (1,1) = -4, (2,1) and (2,2) = -3.
+
+## Method
+Q-learning, epsilon-greedy (0.2), alpha 0.1, gamma 0.9, 3000 episodes.
+Update rule: Q = Q + alpha * (target - Q)
+
+## Sample run
 ```
 Best value per cell:
      0    1     2     3
@@ -14,17 +26,6 @@ Best action per cell:
 2   down   down  right  down
 3  right  right  right  GOAL
 ```
-
-## Problem
-4x4 grid, start (0,0), goal (3,3) = +10, step cost -2,
-hazards: (1,1) = -4, (2,1) and (2,2) = -3.
-
-## Method
-Q-learning, epsilon-greedy (0.2), alpha 0.1, gamma 0.9, 3000 episodes.
-Update rule: Q = Q + alpha * (target - Q)
-
-## Sample run
-(paste the two printed tables here, inside a code block)
 
 ## Possible improvements
 Decaying epsilon, a larger grid, compare with SARSA.
